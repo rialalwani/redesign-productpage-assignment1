@@ -1,0 +1,13 @@
+.featuresgrid{
+    display:flex;
+     gap:2rem;
+     overflow-x: scroll;
+}
+.feature{
+    width:22rem;
+    height:17rem;
+    flex:0 0 auto;
+}
+.featuresgrid::-webkit-scrollbar{
+    display: none;
+}

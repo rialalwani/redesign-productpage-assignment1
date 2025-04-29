@@ -2,6 +2,8 @@ import smallBG from '@/assets/images/main-bg-small.png';
 import { Button } from '@/components/ui';
 import HomeNavbar from '@/components/shared/HomeNav';
 import HcfSignupPopup from '@/components/shared/Popups/HcfSignupPopup';
+import "../../../assets/styles/components/_herosection.css"
+
 
 interface HeroSectionProps {
     scrollToSection: (ref: React.RefObject<HTMLElement>) => void;
@@ -17,9 +19,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     aboutRef,
 }) => {
 
-
+    
     return (
-        <div className="!bg-[#01052f] w-full relative flex flex-col py-2 md:py-5 overflow-hidden">
+        <div className="! herosection w-full relative flex flex-col py-2 md:py-5 overflow-hidden">
             <HomeNavbar
                 scrollToSection={scrollToSection}
                 featuresRef={featuresRef}
@@ -50,10 +52,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 {/* Overlay to ensure text readability */}
                 <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-[-5]"></div>
 
-                <div className="relative z-10 text-white w-full flex flex-col lg:flex-row-reverse md:mt-6 lg:mt-0 lg:items-center lg:justify-between px-4 max-w-[1538px] mx-auto">
+                <div className="relative z-10 text-white w-full flex flex-col lg:flex-row md:mt-6 lg:mt-0 lg:items-center lg: px-4 max-w-[1538px] mx-auto">
                     {/* Video Section */}
-                    <div className="lg:w-5/12 mt-8 lg:mt-0 lg:mb-0 mb-6">
-                        {/* <div className="relative overflow-hidden pt-[56.25%] rounded-lg shadow-lg">
+                    {/*<div className="lg:w-5/12 mt-8 lg:mt-0 lg:mb-0 mb-6">
+                        <div className="relative overflow-hidden pt-[56.25%] rounded-lg shadow-lg">
                             <iframe
                                 src={`https://www.youtube.com/embed/xQl8i2sO_Ls?autoplay=1&mute=${isMuted ? 1 : 0
                                     }&loop=1&playlist=xQl8i2sO_Ls&controls=0&showinfo=0&rel=0`}
@@ -73,16 +75,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                                     <IoVolumeHighOutline size={24} />
                                 )}
                             </button>
-                        </div> */}
-                    </div>
+                        </div>
+                    </div>*/}
 
                     {/* Content Section */}
-                    <div className="lg:w-1/2 lg:pr-8">
-                        <h1 className="text-2xl md:text-4xl font-semibold mb-4 capitalize text-white">
+                    <div className="lg:w-full lg:pr-8">
+                        <h1 className='text-white text-center text-primary mt-5'>Revolutionizing Medical Tourism with AI-Powered Solutions</h1>
+                        <h1 className="text-2xl md:text-4xl font-semibold mb-4 capitalize text-white text-center mt-5">
                             <span className="text-primary">AI front office </span> <br />
                             for healthcare agents
                         </h1>
-                        <p style={{ lineHeight: '0.7' }} className="text-lg my-8 font-light">
+                        <p style={{ lineHeight: '0.7' }} className="text-lg my-8 font-light text-center">
                             Create <span className="text-primary font-bold">AI Store</span>  in 2 min <br />
                             <br />
                             Scale with{' '}
@@ -90,8 +93,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                                 Digital Marketing
                             </span>{' '}
                         </p>
-                        <div>
-                            <HcfSignupPopup popupButtonStatus buttonChildren={<Button block variant='solid' className='rounded-[5px] max-w-[200px]'>Get Started</Button>} />
+                        <p className='text-center font-light'>Empower your healthcare facilitation with intelligent agents, seamless patient coordination, and personalized care — all at your fingertips.</p>
+                        <div className='flex flex-wrap justify-around mt-5'>
+                        <div className='mt-5 pt-5 ml-5 pl-5'>
+                            <HcfSignupPopup popupButtonStatus buttonChildren={<Button block variant='solid' className='rounded-[5px]  max-w-[250px]'>Get Started</Button>} />
                         </div>
                         <div className="text-white flex gap-12 mt-8 flex-wrap">
                             <div>
@@ -112,6 +117,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                                 </h1>
                                 <p className="text-lg capitalize">Treatment Plans</p>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>

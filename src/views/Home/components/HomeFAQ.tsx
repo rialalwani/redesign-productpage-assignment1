@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BiChevronDown } from 'react-icons/bi';
+import "../../../assets/styles/components/_faq.css"
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => (
     <div className="border-b border-indigo-100">
@@ -75,7 +76,7 @@ const FAQ = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-16 px-2 md:px-4 sm:px-6 lg:px-8">
+        <div className="faq min-h-screen  py-16 px-2 md:px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12">

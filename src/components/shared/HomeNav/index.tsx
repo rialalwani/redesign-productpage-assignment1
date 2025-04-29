@@ -173,7 +173,7 @@ const HomeNavbar: React.FC<HomeNavbarProps> = ({
 													<Button
 														block
 														variant="solid"
-														className="rounded-[5px]"
+														className="bg-[#A69080] rounded-[5px]"
 													>
 														Get Started
 													</Button>

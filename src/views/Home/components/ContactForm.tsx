@@ -4,6 +4,7 @@ import { BiPhone, BiSend, BiUser } from 'react-icons/bi';
 import { BsLinkedin, BsTwitter } from 'react-icons/bs';
 import { CgMail } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
+import "../../../assets/styles/components/_contactform.css"
 
 const ContactForm = () => {
     const [formState, setFormState] = useState<{
@@ -62,9 +63,9 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+        <div className=" py-12 px-4 sm:px-6 lg:px-8 ">
             <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
                     {/* Left Column - Contact Info */}
                     <div className="space-y-8">
                         <div>
@@ -116,8 +117,8 @@ const ContactForm = () => {
                     </div>
 
                     {/* Right Column - Contact Form */}
-                    <div className="bg-gray-50 rounded-2xl shadow-lg p-4 sm:p-8">
-                        <form onSubmit={handleSubmit} className="space-y-3">
+                    <div className="bg-gray-50 rounded-2xl shadow-lg p-4 sm:p-8 contact-form">
+                        <form onSubmit={handleSubmit} className="space-y-3 ">
                             <div className="relative">
                                 <div className={`absolute left-3 top-1/2 -translate-y-1/2 transition-all duration-300 ${focused === 'fullName' || formState.fullname ? 'text-primary' : 'text-gray-400'
                                     }`}>
@@ -181,7 +182,7 @@ const ContactForm = () => {
                                     onFocus={() => setFocused('message')}
                                     onBlur={() => setFocused('')}
                                     rows={4}
-                                    className="w-full p-4 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all"
+                                    className="w-full p-4 bg-white border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all"
                                     required
                                 />
                             </div>
@@ -189,7 +190,7 @@ const ContactForm = () => {
                             <Button
                                 loading={isSubmitting}
                                 type="submit"
-                                className="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-transparent transition-colors duration-300 flex items-center justify-center space-x-2 shadow-md hover:shadow-lg"
+                                className="submit-btn bg-[rgba(148, 0, 211, 0.723)] w-full  text-white py-3 px-6 rounded-lg font-semibold  flex items-center justify-center space-x-2 "
                             >
                                 <span>Submit</span>
                                 <BiSend className="w-5 h-5" />

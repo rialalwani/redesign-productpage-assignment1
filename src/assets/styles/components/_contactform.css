@@ -1,0 +1,8 @@
+.contact-form{
+    border: 1px solid ;
+    border-color: rgba(148, 0, 211, 0.856);
+}
+.submit-btn{
+    background-color: rgba(148, 0, 211, 0.856);
+    color:white;
+}

@@ -4,6 +4,7 @@ import { BsDatabase } from 'react-icons/bs';
 import { FaUserSecret } from 'react-icons/fa';
 import { FiFileText } from 'react-icons/fi';
 import { LuLanguages } from 'react-icons/lu';
+import "../../../assets/styles/components/-featuresgrid.css"
 
 const solutions = [
   {
@@ -64,22 +65,22 @@ const solutions = [
 
 const FeaturesGrid: React.FC = () => {
   return (
-    <div className="py-16 px-4 md:px-8 bg-gray-50">
+    <div className="py-16 px-4 md:px-8 bg-gray-50 bg-[#EEE2DC]">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 mt-10 pt-5">
             Our Comprehensive Solutions
           </h2>
           <div className="h-1 w-24 bg-primary mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="featuresgrid">
           {solutions.map((solution, index) => {
             return (
               <div
                 key={index}
-                className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl"
-              >
+                className={`feature bg-white rounded-xl shadow-lg  transform transition duration-300 hover:scale-105 hover:shadow-xl  `}
+              >  
                 <div className="p-6">
                   <div className={`${solution.color} inline-flex p-3 rounded-lg text-white mb-4`}>
                     {solution.icon}
